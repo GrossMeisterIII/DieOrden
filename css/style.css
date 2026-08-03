@@ -22,7 +22,7 @@
      box-sizing: border-box !important;
 }
  body {
-     color: #666666;
+     color: #000000;
      font-size: 14px;
      font-family: 'poppins', sans-serif;
      line-height: 1.80857;
@@ -30,7 +30,7 @@
      overflow-x: hidden;
 }
  a {
-     color: #1f1f1f;
+     color: #000000;
      text-decoration: none !important;
      outline: none !important;
      -webkit-transition: all .3s ease-in-out;
@@ -46,7 +46,7 @@
      padding: 0 0 10px 0;
      font-weight: normal;
      line-height: normal;
-     color: #111111;
+     color: #000000;
      margin: 0 
 }
  h1 {
@@ -73,7 +73,7 @@
      box-sizing: border-box;
 }
  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-     color: #212121;
+     color: #000000;
      text-decoration: none!important;
      opacity: 1 
 }
@@ -92,7 +92,7 @@
      line-height: 24px;
 }
  a {
-     color: #222222;
+     color: #000000;
      text-decoration: none;
      outline: none !important;
 }
