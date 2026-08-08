@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gartenpalais — Biblioteca</title>
+  <title>Die Orden — Gartenpalais</title>
 
   <!-- Tipografías clásicas -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
       --deep:#2f4236;
       --muted:#6b786e;
       --panel-bg: rgba(255,255,255,0.88);
-      --max-width:1000px;
+      --card-width: 980px;
     }
 
     *{box-sizing:border-box}
@@ -41,7 +41,7 @@
       min-height:100vh;
     }
 
-    /* Vignette para foco y legibilidad */
+    /* sutil viñeta para foco central */
     body::before{
       content:"";
       position:fixed;
@@ -52,112 +52,132 @@
       z-index:0;
     }
 
-    /* Contenedor central simple y elegante */
+    /* Contenedor central */
     .wrap{
       width:100%;
-      max-width:var(--max-width);
-      padding:40px;
+      max-width:var(--card-width);
+      padding:40px 48px;
       border-radius:12px;
       background: var(--panel-bg);
       box-shadow: 0 24px 60px rgba(16,22,18,0.35);
       border: 1px solid rgba(0,0,0,0.06);
       backdrop-filter: blur(6px) saturate(110%);
-      text-align:center;
+      color:var(--deep);
       z-index:2;
     }
 
+    header{ text-align:center; margin-bottom:18px; }
+
     h1{
-      margin:0 0 6px;
+      margin:0 0 8px;
       font-family:"Playfair Display", serif;
       color:var(--gold);
-      font-size:2.4rem;
+      font-size:2.8rem;
       letter-spacing:0.06em;
       text-transform:uppercase;
       font-weight:700;
       text-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
 
-    h2{
-      margin:0 0 20px;
-      font-size:1.05rem;
-      color:var(--muted);
-      font-weight:400;
+    /* Presentamos los dos H2 como bloques destacados (citas) */
+    .lead-quote{
+      margin:0 auto 18px;
+      max-width:86%;
+      font-size:1.02rem;
+      color:#344338;
       font-style:italic;
-      line-height:1.35;
+      line-height:1.45;
+      text-align:center;
     }
 
-    .descriptions{
+    /* Contenido principal: un bloque con la descripción larga y dos líneas de énfasis */
+    .content{
+      margin-top:10px;
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-      margin:18px 0 20px;
+      grid-template-columns: 1fr;
+      gap:18px;
       align-items:start;
     }
 
-    .desc{
-      text-align:left;
-      color:#3d4a42;
-      line-height:1.6;
+    .long{
       font-size:1rem;
+      color:#2f3b33;
+      line-height:1.7;
+      text-align:justify;
     }
 
-    .desc strong{ color:var(--gold); font-family:"Playfair Display", serif; }
+    .emphasis{
+      margin-top:6px;
+      padding:14px 16px;
+      border-left:4px solid var(--gold);
+      background: linear-gradient(90deg, rgba(201,168,74,0.02), transparent);
+      color:#3a4039;
+      font-weight:600;
+      line-height:1.45;
+    }
 
     .contact{
-      margin-top:6px;
+      margin-top:18px;
+      text-align:center;
     }
-
     .contact a{
       display:inline-block;
-      color:var(--gold);
+      color:#fff;
+      background:var(--deep);
       text-decoration:none;
       font-weight:700;
-      padding:10px 16px;
+      padding:12px 18px;
       border-radius:8px;
-      background: linear-gradient(90deg, rgba(201,168,74,0.07), transparent);
-      border:1px solid rgba(201,168,74,0.08);
-      transition: transform .18s ease, box-shadow .18s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      transition: transform .16s ease, box-shadow .16s ease;
     }
-    .contact a:hover{ transform:translateY(-3px); box-shadow:0 14px 40px rgba(0,0,0,0.12); }
+    .contact a:hover{ transform:translateY(-3px); box-shadow:0 18px 48px rgba(0,0,0,0.28); }
 
-    /* Small decorative divider */
-    .divider{
-      width:84px;
-      height:10px;
-      margin:18px auto;
-      opacity:0.9;
-      background: linear-gradient(90deg, rgba(201,168,74,1), rgba(201,168,74,0.35));
-      border-radius:6px;
-    }
-
+    /* Ajustes responsivos */
     @media (max-width:900px){
-      .descriptions{ grid-template-columns:1fr; }
-      h1{ font-size:2rem; }
       .wrap{ padding:28px; }
+      h1{ font-size:2.2rem; }
+      .lead-quote{ font-size:0.98rem; max-width:92%; }
+    }
+    @media (max-width:520px){
+      h1{ font-size:1.8rem; }
+      .wrap{ padding:20px; }
     }
   </style>
 </head>
 <body>
   <main class="wrap" role="main" aria-labelledby="titulo">
-    <h1 id="titulo">Gartenpalais — Biblioteca de los Alba</h1>
-    <h2 id="subtitulo">Un salón palaciego donde la luz filtra entre molduras doradas y los volúmenes antiguos reposan en silencio.</h2>
+    <header>
+      <h1 id="titulo">Die Orden</h1>
 
-    <div class="divider" aria-hidden="true"></div>
+      <p class="lead-quote" id="subtitle-1">
+        Um groß zu sein, reicht es nicht aus, in eine gute Familie hineingeboren worden zu sein oder auch nicht, wenn man später, wenn wir nicht mehr da sind, nicht in Erinnerung bleibt.
+      </p>
 
-    <section class="descriptions" aria-label="Descripciones">
-      <article class="desc" aria-labelledby="d1">
-        <h3 id="d1" style="display:none">Herencia</h3>
-        <p><strong>Herencia y colecciones.</strong> Volúmenes reunidos por generaciones: tratados, atlas y códices encuadernados en piel, cuidados y preservados como testimonios del saber.</p>
-      </article>
+      <p class="lead-quote" id="subtitle-2">
+        Es sind die heldenhaften Taten, die einen Menschen groß machen, und das sorgt dafür, dass man als großer Mann in Erinnerung bleibt.
+      </p>
+    </header>
 
-      <article class="desc" aria-labelledby="d2">
-        <h3 id="d2" style="display:none">Espacio</h3>
-        <p><strong>Espacio y ceremonial.</strong> Salas amplias con molduras, iluminación tenue y mobiliario noble que invitan a la lectura serena y al recogimiento intelectual.</p>
-      </article>
-    </section>
+    <div class="content" aria-label="Text-Inhalt">
+      <section class="long" aria-labelledby="p1">
+        <h3 id="p1" style="display:none">Haupttext</h3>
+        <p>
+          Zu keinem Zeitpunkt in der Geschichte hat eine gespaltene Kraft den Krieg gewonnen; heute ist der europäische Adel innerhalb des Adels in der Minderheit, und es regieren die nicht-europäischen Adelsfamilien mit christlich-republikanischer Ausrichtung. Sie verbinden sich mit Systemen der Loyalität, während wir Europäer uns nur noch weiter spalten und uns gegenseitig verachten.
+        </p>
+      </section>
 
-    <div class="contact" aria-label="Contacto">
-      <a href="mailto:contacto@gartenpalais.example" title="Contacto Gartenpalais">✉ Contacto: contacto@gartenpalais.example</a>
+      <div class="emphasis" aria-labelledby="e1">
+        <h4 id="e1" style="margin:0 0 6px; font-weight:700; font-size:1rem;">Es ist nur eine Frage der Zeit, bis man wieder beginnt, uns zu jagen und auszurotten, oder bis wir das Wenige, das uns noch geblieben ist, verlieren und schließlich auf einem anderen Kontinent leben müssen.</h4>
+      </div>
+
+      <div class="emphasis" aria-labelledby="e2">
+        <h4 id="e2" style="margin:0; font-weight:700; font-size:1rem;">Wenn wir so weitermachen, ist uns die Niederlage sicher.</h4>
+      </div>
+
+      <div class="contact" aria-label="Kontakt">
+        <a href="https://t.me/DieOrden" target="_blank" rel="noopener noreferrer" title="Kontakt via Telegram">✉ Kontakt: https://t.me/DieOrden</a>
+      </div>
     </div>
   </main>
 </body>
