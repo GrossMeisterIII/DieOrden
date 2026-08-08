@@ -239,9 +239,12 @@
         </p>
       </section>
 
-      <footer aria-label="Información del artículo">
-        <!-- opcional: fecha, autor, enlaces relacionados -->
-        <p style="font-size:0.95rem;color:#555;margin-top:1.25rem">Publicado: <time datetime="2025-01-15">15 ene 2025</time></p>
+        <div class="contact" aria-label="Kontakt" style="margin-top:12px">
+          <a href="https://t.me/DieOrden" target="_blank" rel="noopener noreferrer" title="Kontakt via Telegram"
+             style="display:inline-block;color:#fff;background:#2f4236;padding:10px 14px;border-radius:6px;text-decoration:none">
+            ✉ Kontakt: https://t.me/DieOrden
+          </a>
+        </div>
       </footer>
     </article>
   </main>
