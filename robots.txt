@@ -1,0 +1,32 @@
+# 1.
+User-agent: *
+Allow: /
+
+# 2.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# 3.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# 4.
+Sitemap: https://grossmeisteriii.github.io/DieOrden/sitemap.xml
