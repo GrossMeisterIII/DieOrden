@@ -151,7 +151,7 @@
       /* Fondo fotográfico (reemplaza palacio.jpg por el nombre real) */
       background-image:
         linear-gradient(180deg, rgba(201,168,74,0.12), rgba(255,255,255,0.02)),
-        url('images/palacio.jpg');
+        url('Images/palacio.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
