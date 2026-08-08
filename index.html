@@ -1,107 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Die Orden</title>
-    <style>
-        /* ESTILO MINIMALISTA ARISTOCRÁTICO */
-        body {
-            background-color: #111111; /* Fondo casi negro */
-            color: #d4d4d4; /* Texto gris claro suave */
-            font-family: 'Georgia', 'Times New Roman', serif; /* Tipografía clásica */
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Casa Noble</title>
 
-        /* Contenedor principal estrecho y elegante */
-        .container {
-            max-width: 600px;
-            padding: 40px 20px;
-            border: 1px solid #333; /* Borde sutil */
-            background-color: #161616;
-            box-shadow: 0 0 20px rgba(0,0,0,0.8);
-        }
+  <!-- Tipografías elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-        /* Título principal grande y dorado */
-        h1 {
-            color: #ffff00; /* Dorado */
-            font-size: 3rem;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            font-weight: normal;
-            text-transform: uppercase;
-        }
+  <style>
+    :root{
+      --bg-deep:#2a0b0b;      /* deep wine */
+      --bg-mid:#3f0f10;       /* mid tone */
+      --gold:#cfa84a;         /* warm gold */
+      --card-bg: rgba(255,255,255,0.04);
+      --glass: rgba(255,255,255,0.03);
+      --muted: rgba(255,255,255,0.7);
+      --accent: rgba(207,168,74,0.12);
+      --max-width: 920px;
+    }
 
-        /* Subtítulo discreto */
-        h2 {
-            color: #666;
-            font-size: 1rem;
-            font-weight: normal;
-            font-style: italic;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 20px;
-            display: inline-block;
-        }
+    /* Reset minimal */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Libre Baskerville", serif;
+      color: #efe9e6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      background-color:var(--bg-deep);
+      /* layered background: dark gradient + subtle textile pattern */
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.02), transparent 10%),
+        radial-gradient(circle at 90% 80%, rgba(0,0,0,0.15), transparent 25%),
+        linear-gradient(180deg, rgba(63,15,16,0.9), rgba(42,11,11,0.96)),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.01) 0px, rgba(255,255,255,0.01) 1px, transparent 1px, transparent 8px);
+      background-blend-mode: overlay, normal, multiply, overlay;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+    }
 
-        /* Texto de párrafo */
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #aaa;
-        }
+    /* Decorative faint vignette */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background: radial-gradient(1200px 700px at 50% 10%, rgba(207,168,74,0.03), transparent 10%),
+                  radial-gradient(900px 500px at 50% 90%, rgba(0,0,0,0.45), transparent 40%);
+      mix-blend-mode: overlay;
+    }
 
-        /* Enlaces simples sin adornos */
-        a {
-            color: #c5a059;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-bottom 0.3s;
-        }
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      margin:0 auto;
+      position:relative;
+      padding:48px;
+      border-radius:14px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)),
+        var(--card-bg);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.02) inset;
+      border: 1px solid rgba(207,168,74,0.12);
+      backdrop-filter: blur(4px) saturate(120%);
+      overflow:hidden;
+    }
 
-        a:hover {
-            border-bottom: 1px solid #c5a059;
-        }
+    /* Top ornament - crest / crown */
+    .crest{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-top:-36px;
+      margin-bottom:18px;
+    }
+    .crest svg{ width:84px; height:auto; filter: drop-shadow(0 6px 10px rgba(0,0,0,0.4)); }
 
-        /* Pie de página muy discreto */
-        footer {
-            margin-top: 50px;
-            font-size: 0.8rem;
-            color: #444;
-        }
-    </style>
+    header{
+      text-align:center;
+      padding: 6px 28px 20px;
+    }
+
+    h1{
+      font-family: "Playfair Display", serif;
+      font-weight:900;
+      letter-spacing:0.06em;
+      margin:6px 0 6px;
+      font-size:2.8rem;
+      color:var(--gold);
+      text-transform:uppercase;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.6);
+    }
+
+    h2{
+      font-family: "Libre Baskerville", serif;
+      margin:0;
+      color:var(--muted);
+      font-weight:400;
+      font-size:1.05rem;
+      letter-spacing:0.02em;
+    }
+
+    main{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:28px;
+      padding:24px 28px 18px;
+      align-items:start;
+    }
+
+    .description{
+      background: linear-gradient(180deg, rgba(207,168,74,0.02), transparent);
+      padding:20px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+      color: #f6efe9;
+      line-height:1.6;
+      font-size:1rem;
+    }
+
+    .description strong{ color:var(--gold); font-weight:700; }
+
+    .contact{
+      grid-column: 1 / -1;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:center;
+      padding-top:12px;
+      border-top:1px solid rgba(255,255,255,0.02);
+      margin-top:6px;
+    }
+
+    .contact a{
+      color:var(--gold);
+      text-decoration:none;
+      font-weight:700;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      background: linear-gradient(90deg, rgba(207,168,74,0.06), transparent);
+      padding:10px 16px;
+      border-radius:8px;
+      border:1px solid rgba(207,168,74,0.07);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .contact a:hover{ transform:translateY(-3px); box-shadow: 0 12px 30px rgba(0,0,0,0.45); }
+
+    .contact svg{ width:18px; height:18px; fill:var(--gold); }
+
+    /* Responsive */
+    @media (max-width:720px){
+      main{ grid-template-columns: 1fr; }
+      h1{ font-size:2.2rem; }
+      .crest svg{ width:64px; }
+      .container{ padding:28px; }
+    }
+  </style>
 </head>
 <body>
-
-    <div class="container">
-        <!-- TÍTULO PRINCIPAL -->
-        <h1>Die Orden</h1>
-        
-        <!-- SUBTÍTULO O LEMA -->
-        <h2>Alle Richtlinien des Ordens für das maximale Wachstum der höheren Menschen</h2>
-
-        <!-- CONTENIDO PRINCIPAL -->
-        <p>Um groß zu sein, reicht es nicht aus, in eine gute Familie hineingeboren worden zu sein oder nicht, wenn man später, wenn wir nicht mehr da sind, nicht in Erinnerung bleibt.</p>
-        
-        <p>Es sind die heldenhaften Taten, die einen Menschen groß machen und dafür sorgen, dass man sich an ihn erinnert.</p>
-
-        <!-- ENLACES O SECCIÓN DE CONTACTO -->
-        <p>
-            <a href="https://t.me/DieOrden" class="telegram-link">Kontakt</a>   
-        </p>
-
-        <footer>
-            &copy; GrossMeister Des Die Orden.
-        </footer>
+  <div class="container" role="main" aria-labelledby="titulo-principal">
+    <div class="crest" aria-hidden="true">
+      <!-- Simple crown/escudo inlined SVG with gold fill -->
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#f7e6b6"/>
+            <stop offset="1" stop-color="#cfa84a"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(4,6)">
+          <path d="M8 36 L52 36 L44 22 L36 28 L24 6 L16 28 L8 22 Z" fill="url(#g)" stroke="#8b6b23" stroke-width="1.5"/>
+          <circle cx="12" cy="10" r="3" fill="#fff8de" stroke="#8b6b23" stroke-width="0.9"/>
+          <circle cx="32" cy="2" r="3" fill="#fff8de" stroke="#8b6b23" stroke-width="0.9"/>
+          <circle cx="52" cy="10" r="3" fill="#fff8de" stroke="#8b6b23" stroke-width="0.9"/>
+          <rect x="6" y="36" width="44" height="6" rx="3" fill="#3a1f0f" opacity="0.18"/>
+        </g>
+      </svg>
     </div>
 
+    <header>
+      <h1 id="titulo-principal">Casa Noble de los Alba</h1>
+      <h2>Un refugio de tradición, elegancia y calma palaciega</h2>
+    </header>
+
+    <main>
+      <section class="description" aria-labelledby="desc1">
+        <h3 id="desc1" style="margin-top:0; font-family:'Playfair Display', serif; font-size:1.05rem; color:var(--gold);">Herencia y presencia</h3>
+        <p>
+          En cada rincón se respira una historia tejida con dignidad: telas profundas, maderas pulidas y luz que acaricia los detalles.
+          Una atmósfera pensada para quienes valoran la calma y la nobleza en su forma más pura.
+        </p>
+      </section>
+
+      <section class="description" aria-labelledby="desc2">
+        <h3 id="desc2" style="margin-top:0; font-family:'Playfair Display', serif; font-size:1.05rem; color:var(--gold);">Espacios para el recuerdo</h3>
+        <p>
+          Salones que invitan a la contemplación y a conversaciones pausadas; decoración sobria con toques dorados que realzan la serenidad.
+          Minimalista en exceso, nunca: cada pieza tiene su propósito.
+        </p>
+      </section>
+
+      <div class="contact" aria-label="Contacto">
+        <a href="mailto:contacto@casanoble.example" title="Enviar correo a Casa Noble">
+          <!-- envelope icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11zM4.5 6.5L12 11l7.5-4.5" stroke="none" fill="currentColor"/>
+          </svg>
+          Contacto: contacto@casanoble.example
+        </a>
+      </div>
+    </main>
+  </div>
 </body>
-</html>   
+</html>
