@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Die Orden — Gartenpalais</title>
 
-  <!-- Tipografías clásicas -->
+  <!-- Tipograph -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -20,7 +20,7 @@
     *{box-sizing:border-box}
     html,body{height:100%; margin:0;}
 
-    /* Fondo de pantalla completo: imagen del palacio (ruta sensible a mayúsculas) */
+    /* Background */
     body{
       font-family:"Cormorant Garamond", serif;
       color:var(--deep);
@@ -41,7 +41,7 @@
       min-height:100vh;
     }
 
-    /* sutil viñeta para foco central */
+    /* Edge */
     body::before{
       content:"";
       position:fixed;
@@ -52,7 +52,7 @@
       z-index:0;
     }
 
-    /* Contenedor central */
+    /* Container */
     .wrap{
       width:100%;
       max-width:var(--card-width);
@@ -79,7 +79,7 @@
       text-shadow: 0 6px 18px rgba(0,0,0,0.12);
     }
 
-    /* Presentamos los dos H2 como bloques destacados (citas) */
+    /* press */
     .lead-quote{
       margin:0 auto 18px;
       max-width:86%;
@@ -90,7 +90,7 @@
       text-align:center;
     }
 
-    /* Contenido principal: un bloque con la descripción larga y dos líneas de énfasis */
+    /* Principal */
     .content{
       margin-top:10px;
       display:grid;
@@ -133,7 +133,7 @@
     }
     .contact a:hover{ transform:translateY(-3px); box-shadow:0 18px 48px rgba(0,0,0,0.28); }
 
-    /* Ajustes responsivos */
+    /* Settings */
     @media (max-width:900px){
       .wrap{ padding:28px; }
       h1{ font-size:2.2rem; }
