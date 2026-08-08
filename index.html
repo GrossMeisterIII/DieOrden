@@ -72,7 +72,7 @@
       margin:0 0 8px;
       font-family:"Playfair Display", serif;
       color:var(--gold);
-      font-size:2.8rem;
+      font-size:3.6rem; /* mod */
       letter-spacing:0.06em;
       text-transform:uppercase;
       font-weight:700;
@@ -83,7 +83,7 @@
     .lead-quote{
       margin:0 auto 18px;
       max-width:86%;
-      font-size:1.02rem;
+      font-size:1.5rem; /* mod */
       color:#344338;
       font-style:italic;
       line-height:1.45;
@@ -100,7 +100,7 @@
     }
 
     .long{
-      font-size:1rem;
+      font-size:1.25rem; /* mod */
       color:#2f3b33;
       line-height:1.7;
       text-align:justify;
@@ -114,6 +114,7 @@
       color:#3a4039;
       font-weight:600;
       line-height:1.45;
+      font-size:1.25rem; /* mod */
     }
 
     .contact{
@@ -130,25 +131,33 @@
       border-radius:8px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
       transition: transform .16s ease, box-shadow .16s ease;
+      font-size:1.125rem; /* mod */
     }
     .contact a:hover{ transform:translateY(-3px); box-shadow:0 18px 48px rgba(0,0,0,0.28); }
 
     /* Settings */
     @media (max-width:900px){
       .wrap{ padding:28px; }
-      h1{ font-size:2.2rem; }
-      .lead-quote{ font-size:0.98rem; max-width:92%; }
+      h1{ font-size:3.0rem; } /* mod */
+      .lead-quote{ font-size:1.15rem; max-width:92%; }
+      .long{ font-size:1.05rem; }
+      .emphasis{ font-size:1.05rem; }
+      .contact a{ font-size:1rem; }
     }
     @media (max-width:520px){
-      h1{ font-size:1.8rem; }
+      h1{ font-size:2.4rem; }
       .wrap{ padding:20px; }
+      .lead-quote{ font-size:1.05rem; }
+      .long{ font-size:1rem; }
+      .emphasis{ font-size:1rem; }
+      .contact a{ font-size:0.98rem; padding:12px 16px; }
     }
   </style>
 </head>
 <body>
-  <main class="wrap" role="main" aria-labelledby="titulo">
+  <main class="wrap" role="main" aria-labelledby="tittle">
     <header>
-      <h1 id="titulo">Die Orden</h1>
+      <h1 id="tittle">Die Orden</h1>
 
       <p class="lead-quote" id="subtitle-1">
         Um groß zu sein, reicht es nicht aus, in eine gute Familie hineingeboren worden zu sein oder auch nicht, wenn man später, wenn wir nicht mehr da sind, nicht in Erinnerung bleibt.
@@ -168,11 +177,11 @@
       </section>
 
       <div class="emphasis" aria-labelledby="e1">
-        <h4 id="e1" style="margin:0 0 6px; font-weight:700; font-size:1rem;">Es ist nur eine Frage der Zeit, bis man wieder beginnt, uns zu jagen und auszurotten, oder bis wir das Wenige, das uns noch geblieben ist, verlieren und schließlich auf einem anderen Kontinent leben müssen.</h4>
+        <h4 id="e1" style="margin:0 0 6px; font-weight:700;">Es ist nur eine Frage der Zeit, bis man wieder beginnt, uns zu jagen und auszurotten, oder bis wir das Wenige, das uns noch geblieben ist, verlieren und schließlich auf einem anderen Kontinent leben müssen.</h4>
       </div>
 
       <div class="emphasis" aria-labelledby="e2">
-        <h4 id="e2" style="margin:0; font-weight:700; font-size:1rem;">Wenn wir so weitermachen, ist uns die Niederlage sicher.</h4>
+        <h4 id="e2" style="margin:0; font-weight:700;">Wenn wir so weitermachen, ist uns die Niederlage sicher.</h4>
       </div>
 
       <div class="contact" aria-label="Kontakt">
