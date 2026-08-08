@@ -66,7 +66,8 @@
     *{box-sizing:border-box}
     html,body{height:100%; margin:0;}
 
-    /* Edge */
+    /* Background fallback/ body{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; color: var(--deep); background-color: #f4f2ee; / color de fondo neutro; cámbialo si querés otro */ display:flex; align-items:center; justify-content:center; padding:48px 20px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; min-height:100vh; }
+    /* Edge *//* Background (fallback cuando no hay imagen) / body{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; color: var(--deep); background-color: #f4f2ee; / color de fondo neutro; cámbialo si querés otro */ display:flex; align-items:center; justify-content:center; padding:48px 20px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; min-height:100vh; }
     body::before{
       content:"";
       position:fixed;
@@ -223,7 +224,7 @@
 
       <footer>
 
-        <address class="Kontakt" style="margin-top:12px">
+        <address class="contact" style="margin-top:12px">
           <a href="https://t.me/DieOrden" target="_blank" rel="noopener noreferrer" title="Kontakt via Telegram"
              style="display:inline-block;color:#fff;background:#2f4236;padding:10px 14px;border-radius:6px;text-decoration:none">
             ✉ Kontakt: https://t.me/DieOrden
