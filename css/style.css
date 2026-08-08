@@ -66,25 +66,6 @@
     *{box-sizing:border-box}
     html,body{height:100%; margin:0;}
 
-    /* Background */
-    body{
-      font-family:"Times New Roman", Times;
-      color:var(--deep);
-      background-image:
-        linear-gradient(rgba(201,168,74,0.12), rgba(255,255,255,0.02)),
-        url('./Images/palacio.jpg');
-      background-size: cover;
-      background-position: center center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-blend-mode: overlay;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:48px 20px;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      min-height:100vh;
     }
 
     /* Edge */
