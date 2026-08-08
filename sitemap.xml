@@ -7,13 +7,4 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- other <url> -->
-  <!--
-  <url>
-    <loc>https://grossmeisteriii.github.io/DieOrden/about.html</loc>
-    <lastmod>2026-07-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  -->
 </urlset>
