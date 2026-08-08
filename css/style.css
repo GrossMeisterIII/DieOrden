@@ -20,9 +20,6 @@
     *{box-sizing:border-box}
     html,body{height:100%; margin:0;}
 
-    /* Base font size: letras "chicas" = 14px */
-    html { font-size: 14px; }
-
     /* Background */
     body{
       font-family:"Cormorant Garamond", serif;
