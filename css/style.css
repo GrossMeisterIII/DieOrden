@@ -3,11 +3,55 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Die Orden — Gartenpalais</title>
+  <title>Die Orden</title>
 
   <!-- Tipograph -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Die Orden",
+  "url": "https://grossmeisteriii.github.io/DieOrden/",
+  "description": "Ritterorden",
+  "additionalType": "Ritterorden",
+  "sameAs": [
+    "https://grossmeisteriii.github.io/DieOrden/"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "other",
+      "url": "https://t.me/DieOrden"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "Ritterorden",
+  "author": {
+    "@type": "Organization",
+    "name": "Gross Meister III",
+    "description": "Gross Meister",
+    "identifier": "Noblesse"
+  },
+  "reviewedBy": {
+    "@type": "Person",
+    "name": "Dra. Ana Smith"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-02-01",
+  "additionalType": "RitterordenWebPage"
+}
+</script>
+  
+<head>
+  
   <style>
     :root{
       --gold:#FFD700;
