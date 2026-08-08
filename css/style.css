@@ -203,13 +203,14 @@
     Jump
   </a>
 
-  <main id="main-content">
+  <main id="main-content" class="wrap">
+    <article lang="de">
       <header>
         <h1 id="art-title">Die Orden</h1>
       </header>
 
-      <section id="Legacy" aria-labelledby="legacy-title">
-        <h2 id="legado-title">Das Vermächtnis und die Größe</h2>
+      <section id="legacy" aria-labelledby="legacy-title">
+        <h2 id="legacy-title">Das Vermächtnis und die Größe</h2>
         <p>
           Um groß zu sein, reicht es nicht aus, in eine gute Familie hineingeboren worden zu sein – oder auch nicht –, wenn man sich später nicht mehr an einen erinnert, wenn wir nicht mehr da sind.
         </p>
@@ -218,31 +219,36 @@
         </p>
       </section>
 
-      <section id="division" aria-labelledby="divided-title">
+      <section id="division" aria-labelledby="division-title">
         <h2 id="division-title">Historische Spaltung und aktueller Kontext</h2>
         <p>
           Zu keinem Zeitpunkt in der Geschichte hat eine gespaltene Macht einen Krieg gewonnen. Heute ist der europäische Adel innerhalb des weltweiten Adels in der Minderheit, und es sind die nicht-europäischen Adelsgruppen mit christlich-republikanischer Ausrichtung, die das Sagen haben. Sie verbinden sich zu Loyalitätsbündnissen, während wir Europäer uns nur noch weiter spalten und gegenseitig verachten.
         </p>
       </section>
 
-      <section id="amenazas" aria-labelledby="threats-title">
-        <h3 id="amenazas-title">Amenazas futuras</h3>
+      <section id="Drohungen" aria-labelledby="Drohungen-title">
+        <h2 id="Drohungen-title">Amenazas futuras</h2>
         <p>
           Es ist nur eine Frage der Zeit, bis man wieder beginnt, uns zu jagen und auszurotten, oder bis wir das Wenige, das uns noch geblieben ist, verlieren und schließlich auf einem anderen Kontinent leben müssen.
         </p>
 
-        <h4 id="conclusion-title">Conclusion</h4>
+        <h3 id="conclusion-title">Conclusion</h3>
         <p>
           Wenn wir so weitermachen, ist uns die <strong>Niederlage sicher</strong>.
         </p>
       </section>
 
-        <div class="contact" aria-label="Kontakt" style="margin-top:12px">
+      <footer>
+        <p style="font-size:0.95rem;color:#555;margin-top:1.25rem">
+          Publicado: <time datetime="2025-01-15">15 ene 2025</time>
+        </p>
+
+        <address class="Kontakt" style="margin-top:12px">
           <a href="https://t.me/DieOrden" target="_blank" rel="noopener noreferrer" title="Kontakt via Telegram"
              style="display:inline-block;color:#fff;background:#2f4236;padding:10px 14px;border-radius:6px;text-decoration:none">
             ✉ Kontakt: https://t.me/DieOrden
           </a>
-        </div>
+        </address>
       </footer>
     </article>
   </main>
