@@ -4,6 +4,7 @@ Allow: /
 
 # 2.
 User-agent: Googlebot
+Allow: /sitemap.xml
 Allow: /
 
 User-agent: Bingbot
