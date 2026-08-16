@@ -151,8 +151,8 @@
     }
     .contact a{
   display:inline-block;
-  color: var(--black);        /* texto negro sobre el botón amarillo */
-  background: var(--gold);    /* botón amarillo */
+  color: var(--black);        /* */
+  background: var(--gold);    /* */
   text-decoration:none;
   font-weight:700;
   padding:12px 18px;
@@ -160,7 +160,7 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   transition: transform .16s ease, box-shadow .16s ease;
   font-size:1.125rem;
-  border: 2px solid rgba(255,255,255,0.06); /* opcional: sutil borde */
+  border: 2px solid rgba(255,255,255,0.06); /* */
 }
 .contact a:hover{
   transform: translateY(-3px);
