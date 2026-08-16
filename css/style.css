@@ -55,7 +55,8 @@
     
   <style>
     :root{
-      --gold:#000000;
+      --black:#000000;
+      --gold:#ffff00;
       --deep:#2f4236;
       --muted:#6b786e;
       --panel-bg: rgba(255,255,255,0.88);
@@ -189,13 +190,21 @@
   <main id="main-content" class="wrap">
     <article lang="de">
       <header>
-        <h1 id="art-title">Die Orden</h1>
+        <h1 id="art-title">Die Orden: Europäischer heidnischer Ritterorden</h1>
       </header>
+      <!-- Sub -->
+  <p class="lead">
+    Das Vermächtnis und die Größe: Um groß zu sein, reicht es nicht aus, in eine gute Familie hineingeboren worden zu sein.
+    Es sind die heldenhaften Taten, die einen Menschen groß machen und in Erinnerung bleiben lassen.
+  </p>
 
       <section id="legacy" aria-labelledby="legacy-title">
-        <h2 id="legacy-title">Das Vermächtnis und die Größe</h2>
+        <h2 id="legacy-title">Historische Spaltung und aktueller Kontext</h2>
         <p>
-          Europäischer heidnischer Ritterorden - Um groß zu sein, reicht es nicht aus, in eine gute Familie hineingeboren worden zu sein – oder auch nicht –, wenn man sich später nicht mehr an einen erinnert, wenn wir nicht mehr da sind.
+          Zu keinem Zeitpunkt in der Geschichte hat eine gespaltene Macht einen Krieg gewonnen.
+    Heute ist der europäische Adel innerhalb des weltweiten Adels in der Minderheit.
+    Während sich nicht-europäische Adelsgruppen zu Loyalitätsbündnissen verbinden,
+    fehlt es uns Europäern oft an Einheit.
         </p>
         <p>
           Es sind die <strong>heldenhaften Taten</strong>, die einen Menschen groß machen, und dies bewirkt, dass man als großer Mann in Erinnerung bleibt.
@@ -203,21 +212,24 @@
       </section>
 
       <section id="division" aria-labelledby="division-title">
-        <h2 id="division-title">Historische Spaltung und aktueller Kontext</h2>
+        <h2 id="division-title">Zukünftige Herausforderungen und Perspektiven</h2>
         <p>
           Zu keinem Zeitpunkt in der Geschichte hat eine gespaltene Macht einen Krieg gewonnen. Heute ist der europäische Adel innerhalb des weltweiten Adels in der Minderheit, und es sind die nicht-europäischen Adelsgruppen mit christlich-republikanischer Ausrichtung, die das Sagen haben. Sie verbinden sich zu Loyalitätsbündnissen, während wir Europäer uns nur noch weiter spalten und gegenseitig verachten.
         </p>
       </section>
 
       <section id="Drohungen" aria-labelledby="Drohungen-title">
-        <h2 id="Drohungen-title">Zukünftige Bedrohungen</h2>
+        <h2 id="Drohungen-title">Erhalt der kulturellen Identität</h2>
         <p>
-          Es ist nur eine Frage der Zeit, bis man wieder beginnt, uns zu jagen und auszurotten, oder bis wir das Wenige, das uns noch geblieben ist, verlieren und schließlich auf einem anderen Kontinent leben müssen.
+          Es besteht die Gefahr, dass wir das Wenige, das uns noch geblieben ist, verlieren,
+    wenn wir uns nicht neu organisieren. Der Verlust der Heimat und die Zerstreuung auf andere Kontinente
+    sind reale Szenarien, die es zu verhindern gilt.
         </p>
 
-        <h3 id="conclusion-title">Fazit</h3>
+        <h3 id="conclusion-title">Fazit und Weg nach vorn</h3>
         <p>
-          Wenn wir so weitermachen, ist uns die <strong>Niederlage sicher</strong>.
+          Notwendigkeit der Einheit: Wenn wir so weitermachen, ist uns die Niederlage sicher.
+    Nur durch Einigkeit können wir unser Erbe bewahren.
         </p>
       </section>
 
