@@ -237,6 +237,7 @@
   </style>
 </head>
 <body>
+<div id="hero" aria-hidden="true"></div>
   <!-- Skip link  -->
   <a href="#main-content" class="skip-link" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden"
      onfocus="this.style.position='static';this.style.left='0';this.style.width='auto';this.style.height='auto'">
@@ -285,5 +286,33 @@
       </footer>
     </article>
   </main>
+  <script>
+  (function(){
+    var hero = document.getElementById('hero');
+    if(!hero) return;
+    var hidden = false;
+    function hideHero(){
+      if(hidden) return;
+      hidden = true;
+      hero.classList.add('hidden');
+      // eliminar del DOM después de la transición
+      setTimeout(function(){
+        if(hero && hero.parentNode) hero.parentNode.removeChild(hero);
+      }, 700);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('wheel', onWheel);
+    }
+    function onScroll(){
+      if(window.scrollY > 10) hideHero();
+    }
+    function onWheel(){
+      if(window.scrollY > 0) hideHero();
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('wheel', onWheel, {passive:true});
+    // fallback: ocultar automáticamente tras 3s si no hay interacción
+    setTimeout(function(){ if(!hidden) hideHero(); }, 3000);
+  })();
+</script>
 </body>
 </html>
