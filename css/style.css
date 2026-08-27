@@ -84,7 +84,6 @@
     mix-blend-mode: multiply;
     z-index:0;
   }
-
 #hero{
   display:block;
   min-height:100vh;
@@ -95,6 +94,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   z-index:0;
+  @media (max-width:520px){ #hero{ background-position: center 30%;
 }
 
 /* media: móvil -> ajustar foco si hace falta */
