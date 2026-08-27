@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Die Orden — Europäischer heidnischer Ritterorden">
+<link rel="preload" as="image" href="images/1.avif">
   <title>Die Orden</title>
   <script type="application/ld+json">
 {
@@ -88,20 +89,19 @@
 #hero{
   position:fixed;
   inset:0;
-  min-height:100vh; /* asegura que cubra la ventana */
-  background-color:#000; /* fallback mientras carga la imagen */
+  min-height:100vh;
+  background-color:#000;
   background-image: url('images/1.avif');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  z-index:1; /* por debajo de .wrap (z-index:2) */
+  z-index:1;
   transition: opacity .6s ease, transform .6s ease, visibility .6s;
   opacity: 1;
   pointer-events: none;
   will-change: opacity, transform;
-  position: fixed;
 }
-/* oscurecer para legibilidad del contenido encima */
+
 #hero::after{
   content:"";
   position:absolute;
@@ -110,14 +110,12 @@
   pointer-events: none;
 }
 
-/* estado oculto */
 #hero.hidden{
   opacity: 0;
   transform: scale(1.02);
   visibility: hidden;
 }
 
-/* fallback / webp: carga webp si el navegador lo soporta (opcional) */
 @supports (background-image: image-set(url("a.webp") 1x)) {
   #hero {
     background-image: image-set(
@@ -128,16 +126,15 @@
   }
 }
 
-/* media: móvil -> imagen más ligera si la tienes (opcional) */
 @media (max-width:520px){
   #hero{
     background-position: center 30%;
-    background-image: url('images/1-small.avif'); /* opcional: versión ligera para móviles */
   }
+}
 }  .wrap{
     width:100%;
     max-width:var(--card-width);
-    margin: 0 auto;         /* centra el contenido (evita que parezca corrida) */
+    margin: 0 auto;
     padding:40px 48px;
     border-radius:12px;
     background: var(--panel-bg);
