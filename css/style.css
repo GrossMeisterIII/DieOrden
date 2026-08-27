@@ -189,7 +189,15 @@
       .emphasis{ font-size:1rem; }
       .contact a{ font-size:0.98rem; padding:12px 16px; }
     }
-  /* Hero full-screen / .hero{ position:relative; width:100vw; margin-left: calc(50% - 50vw); height:100vh; background-image: url('images/hero.webp'); background-size:cover; background-position:center; background-repeat:no-repeat; z-index:1; / queda debajo de .wrap (z-index:2) / } .hero::after{ content:""; position:absolute; inset:0; background: rgba(0,0,0,0.35); / oscurece un poco la imagen para contraste / pointer-events:none; } / opcional para pantallas muy bajas */ @media (max-height:600px){ .hero{ height:60vh; } }
+  /* Hero full-screen */
+.hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 100vh;
+  background: url('images/1.avif') center/cover no-repeat;
+  background-color: #000; /* fallback */
+}
   </style>
 </head>
 <body>
