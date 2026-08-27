@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Die Orden — Europäischer heidnischer Ritterorden">
-<link rel="preload" as="image" href="images/1.avif">
   <title>Die Orden</title>
   <script type="application/ld+json">
 {
@@ -85,56 +84,12 @@
     mix-blend-mode: multiply;
     z-index:0;
   }
-/* Hero background visible on first view */
-#hero{
-  position:fixed;
-  inset:0;
-  min-height:100vh;
-  background-color:#000;
-  background-image: url('images/1.avif');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  z-index:1;
-  transition: opacity .6s ease, transform .6s ease, visibility .6s;
-  opacity: 1;
-  pointer-events: none;
-  will-change: opacity, transform;
-}
 
-#hero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35));
-  pointer-events: none;
-}
-
-#hero.hidden{
-  opacity: 0;
-  transform: scale(1.02);
-  visibility: hidden;
-}
-
-@supports (background-image: image-set(url("a.webp") 1x)) {
-  #hero {
-    background-image: image-set(
-      url('images/1.avif') type('image/avif') 1x,
-      url('images/1.webp') type('image/webp') 1x,
-      url('images/1.jpg') type('image/jpeg') 1x
-    );
-  }
-}
-
-@media (max-width:520px){
-  #hero{
-    background-position: center 30%;
-  }
-}
-}  .wrap{
+    /* Container */
+  .wrap{
     width:100%;
     max-width:var(--card-width);
-    margin: 0 auto;
+    margin: 0 auto;         /* centra el contenido (evita que parezca corrida) */
     padding:40px 48px;
     border-radius:12px;
     background: var(--panel-bg);
@@ -237,13 +192,6 @@
   </style>
 </head>
 <body>
-<div id="hero" aria-hidden="false" style="position:fixed;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;">
-  <!-- Botón simple centrado; estilo inline para no tocar CSS global -->
-  <button id="enter-hero" aria-label="Entrar" style="background:rgba(0,0,0,0.5);color:var(--gold);padding:12px 20px;border-radius:8px;border:2px solid rgba(255,255,255,0.06);font-weight:700;cursor:pointer;">
-    Entrar
-  </button>
-</div>
-<div id="hero" aria-hidden="true"></div>
   <!-- Skip link  -->
   <a href="#main-content" class="skip-link" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden"
      onfocus="this.style.position='static';this.style.left='0';this.style.width='auto';this.style.height='auto'">
@@ -292,63 +240,5 @@
       </footer>
     </article>
   </main>
-    <script>
-  (function(){
-    var hero = document.getElementById('hero');
-    var btn  = document.getElementById('enter-hero');
-    if(!hero || !btn) return;
-
-    function hideHero(){
-      // animación CSS si ya existe .hidden (tu CSS define .hidden)
-      hero.classList.add('hidden');
-      // eliminar del DOM después de la transición (coincide con tu transición .6s)
-      setTimeout(function(){
-        if(hero && hero.parentNode) hero.parentNode.removeChild(hero);
-      }, 700);
-    }
-
-    // Sólo cerrar cuando se haga click en el botón Entrar
-    btn.addEventListener('click', function(e){
-      e.preventDefault();
-      hideHero();
-    }, {passive:false});
-
-    // opcional: permitir también pulsar Enter/Space cuando el botón esté enfocado
-    btn.addEventListener('keydown', function(e){
-      if(e.key === 'Enter' || e.key === ' ' || e.keyCode === 13 || e.keyCode === 32){
-        e.preventDefault();
-        hideHero();
-      }
-    });
-  })();
-</script>
-  <script>
-  (function(){
-    var hero = document.getElementById('hero');
-    if(!hero) return;
-    var hidden = false;
-    function hideHero(){
-      if(hidden) return;
-      hidden = true;
-      hero.classList.add('hidden');
-      // eliminar del DOM después de la transición
-      setTimeout(function(){
-        if(hero && hero.parentNode) hero.parentNode.removeChild(hero);
-      }, 700);
-      window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('wheel', onWheel);
-    }
-    function onScroll(){
-      if(window.scrollY > 10) hideHero();
-    }
-    function onWheel(){
-      if(window.scrollY > 0) hideHero();
-    }
-    window.addEventListener('scroll', onScroll, {passive:true});
-    window.addEventListener('wheel', onWheel, {passive:true});
-    // fallback: ocultar automáticamente tras 3s si no hay interacción
-    setTimeout(function(){ if(!hidden) hideHero(); }, 3000);
-  })();
-</script>
 </body>
 </html>
