@@ -81,18 +81,31 @@
     pointer-events:none;
     background: radial-gradient(1000px 500px at 50% 12%, rgba(0,0,0,0.18), transparent 30%);
     mix-blend-mode: multiply;
-    z-index:0;
+    z-index:1;
+  }
+
+  /* Hero fixed on top — MUST be before wrap */
+  .hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60vh;
+    margin-left: calc(50% - 50vw);
+    background: url('images/1.avif') center/cover no-repeat;
+    background-color: #000;
+    z-index: 0;
+    background-attachment: fixed;
   }
 
   /* Container */
   .wrap{
     position: relative;
     z-index: 2;
-    /* empuja todo el contenido por debajo de la hero */
-    padding-top: calc(60vh + 40px); /* igual a hero height + padding superior original */
+    padding-top: calc(60vh + 40px);
     width:100%;
     max-width:var(--card-width);
-    margin: 0 auto;         /* centra el contenido */
+    margin: 0 auto;
     padding-left:48px;
     padding-right:48px;
     padding-bottom:40px;
@@ -117,7 +130,7 @@
     text-shadow: 0 6px 18px rgba(0,0,0,0.12);
   }
 
-  /* Masthead (fondo negro para H1) */
+  /* Masthead */
   .masthead {
     display: inline-block;
     background: rgba(0,0,0,0.95);
@@ -127,12 +140,22 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   }
 
-  /* press */
+  /* lead quote */
   .lead-quote{
     margin:0 auto 18px;
     max-width:86%;
     font-size:1.5rem;
     color:#344338;
+    font-style:italic;
+    line-height:1.45;
+    text-align:center;
+  }
+
+  .lead{
+    margin:0 auto 18px;
+    max-width:86%;
+    font-size:1.5rem;
+    color:#ffff00;
     font-style:italic;
     line-height:1.45;
     text-align:center;
@@ -169,6 +192,7 @@
     margin-top:18px;
     text-align:center;
   }
+
   .contact a{
     display:inline-block;
     color: var(--black);
@@ -182,49 +206,39 @@
     font-size:1.125rem;
     border: 2px solid rgba(255,255,255,0.06);
   }
+
   .contact a:hover{
     transform: translateY(-3px);
     box-shadow: 0 18px 48px rgba(0,0,0,0.28);
   }
 
-  /* ensure sections and contact have black background (visual continuity) */
+  /* ensure sections and contact have black background */
   section, .contact, footer {
     background: rgba(0,0,0,0.95);
     padding: 14px;
     border-radius: 8px;
   }
 
-  /* Settings */
+  /* Responsive Settings */
   @media (max-width:900px){
     .wrap{ padding-top: calc(60vh + 28px); padding-left:28px; padding-right:28px; }
     h1{ font-size:3.0rem; }
     .lead-quote{ font-size:1.15rem; max-width:92%; }
+    .lead{ font-size:1.15rem; max-width:92%; }
     .long{ font-size:1.05rem; }
     .emphasis{ font-size:1.05rem; }
     .contact a{ font-size:1rem; }
   }
+
   @media (max-width:520px){
     h1{ font-size:2.4rem; }
     .wrap{ padding-top: calc(60vh + 20px); padding-left:20px; padding-right:20px; padding-bottom:20px; }
     .lead-quote{ font-size:1.05rem; }
+    .lead{ font-size:1.05rem; }
     .long{ font-size:1rem; }
     .emphasis{ font-size:1rem; }
     .contact a{ font-size:0.98rem; padding:12px 16px; }
   }
-
-  /* Hero fixed on top — visible area 60vh (opción 1) */
-.hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  max-height: 100vh;
-  margin-left: 0;
-  object-fit: contain;
-  object-position: center bottom;
-  z-index: -1;
-}
 </style></head>
 <body>
   <!-- Skip link  -->
@@ -232,6 +246,9 @@
      onfocus="this.style.position='static';this.style.left='0';this.style.width='auto';this.style.height='auto'">
     Jump
   </a>
+
+  <!-- Hero fijo arriba -->
+  <section class="hero" aria-hidden="true" role="img"></section>
 
   <main id="main-content" class="wrap">
     <article lang="de">
@@ -241,8 +258,6 @@
     </div>
   </header>
 
-  <!-- Hero fijo arriba; el .wrap tiene padding-top para empujar el contenido debajo -->
-  <section class="hero" aria-hidden="true" role="img"></section>
       <!-- Sub -->
   <p class="lead">
     Das Erbe und die Größe: Um groß zu sein, reicht es nicht aus, in eine gute Familie geboren zu werden.
@@ -252,20 +267,20 @@
       <section id="legacy" aria-labelledby="legacy-title">
         <h2 id="legacy-title">Das Erbe der Väter: Stolz, Ehre und diplomatische Einheit</h2>
         <p>
-          Die wahre Größe Europas liegt in seinen tiefen Wurzeln, die weit vor das christliche Zeitalter zurückreichen. Unser heidnisches Erbe ist ein Quell der Stärke, der uns lehrt, dass Ehre nicht verhandelt wird, sondern durch Taten erworben wird. Wir laden die europäischen Häuser ein, sich in einem Geist der hohen Diplomatie und des gegenseitigen Respekts zu verbinden. Es geht darum, unsere alten Bindungen zu stärken, unsere gemeinsamen Rituale zu pflegen und eine <strong>Gemeinschaft der kulturellen Souveränität</strong> zu bilden. Durch den Dialog auf Augenhöhe schaffen wir ein Netzwerk der Loyalität, das unsere Traditionen schützt und die Würde unseres Kontinents für kommende Generationen bewahrt. Hier ist kein Platz für Zwietracht, sondern nur für die edle Zusammenarbeit freier Männer und Frauen, die denselben Göttern und derselben Erde verbunden sind. Dies ist kein neuer Orden, sondern ein alter, weithin anerkannter und berühmter Orden, der jedoch bei seiner öffentlichen Vorstellung aus offensichtlichen Gründen privater Natur einen anderen Namen erhält.
+          Die wahre Größe Europas liegt in seinen tiefen Wurzeln, die weit vor das christliche Zeitalter zurückreichen. Unser heidnisches Erbe ist ein Quell der Stärke, der uns lehrt, dass Ehre ni[...]
         </p>
       </section>
 
       <section id="division" aria-labelledby="division-title">
         <h2 id="division-title">Zukünftige Herausforderungen und Perspektiven</h2>
         <p>
-          Die größte Herausforderung liegt in der aktuellen Fragmentierung der europäischen Identät. Während andere globale Mächte durch starke Loyalitätsbündnisse geeint sind, riskieren wir Europäer durch innere Zersplitterung den Verlust unseres kulturellen Einflusses. Es gilt, diese Schwäche zu überwinden und uns nicht länger durch moderne ideologische Grenzen spalten zu lassen, sondern unsere gemeinsame Stärke wiederzuentdecken.
+          Die größte Herausforderung liegt in der aktuellen Fragmentierung der europäischen Identät. Während andere globale Mächte durch starke Loyalitätsbündnisse geeint sind, riskieren wir E[...]
         </p>
       </section>
 
         <h3 id="conclusion-title">Ad Fontes: Rückkehr zur römischen Tugend und Einigkeit</h3>
         <p>
-          Die Geschichte lehrt uns, dass Rom nicht durch Eisen allein fiel, sondern durch den Verlust seiner inneren Einheit. Wir rufen zur Wiederbelebung der Traditionen der Zeit von Julius Cäsar und Augustus auf: eine Ära der <em>Virtus</em> (Tugend), der <em>Pietas</em> (Pflichtbewusstsein) und der unerschütterlichen Disziplin. Unsere Kooperation muss auf dem römischen Ideal basieren, dass die Stärke des Einzelnen in der Stärke der Legion liegt. Lasst uns unsere Unterschiede beiseitelegen und uns unter dem Banner der europäischen Ur-Tradition vereinen. Nur durch diese geschlossene Phalanx können wir den Sturm der Zeit überstehen und das Licht des alten Feuers am Brennen halten. Die Zukunft gehört denen, die sich erinnern, wer sie sind, und <strong>Seite an Seite in fester Formation marschieren, geeint durch Stahl und Willen.</strong>
+          Die Geschichte lehrt uns, dass Rom nicht durch Eisen allein fiel, sondern durch den Verlust seiner inneren Einheit. Wir rufen zur Wiederbelebung der Traditionen der Zeit von Julius Cäsar un[...]
         </p>
       </section>
 
