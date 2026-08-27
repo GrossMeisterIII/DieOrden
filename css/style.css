@@ -104,6 +104,8 @@
 .hero-image {
   display: block;
   width: 100%;
+  height: auto;
+  aspect-ratio: 1900 / 1268;
   max-height: 70vh;
   margin: 24px auto;
   object-fit: cover;
