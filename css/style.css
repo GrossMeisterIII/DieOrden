@@ -237,6 +237,12 @@
   </style>
 </head>
 <body>
+<div id="hero" aria-hidden="false" style="position:fixed;inset:0;z-index:3;display:flex;align-items:center;justify-content:center;">
+  <!-- Botón simple centrado; estilo inline para no tocar CSS global -->
+  <button id="enter-hero" aria-label="Entrar" style="background:rgba(0,0,0,0.5);color:var(--gold);padding:12px 20px;border-radius:8px;border:2px solid rgba(255,255,255,0.06);font-weight:700;cursor:pointer;">
+    Entrar
+  </button>
+</div>
 <div id="hero" aria-hidden="true"></div>
   <!-- Skip link  -->
   <a href="#main-content" class="skip-link" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden"
@@ -286,6 +292,36 @@
       </footer>
     </article>
   </main>
+    <script>
+  (function(){
+    var hero = document.getElementById('hero');
+    var btn  = document.getElementById('enter-hero');
+    if(!hero || !btn) return;
+
+    function hideHero(){
+      // animación CSS si ya existe .hidden (tu CSS define .hidden)
+      hero.classList.add('hidden');
+      // eliminar del DOM después de la transición (coincide con tu transición .6s)
+      setTimeout(function(){
+        if(hero && hero.parentNode) hero.parentNode.removeChild(hero);
+      }, 700);
+    }
+
+    // Sólo cerrar cuando se haga click en el botón Entrar
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      hideHero();
+    }, {passive:false});
+
+    // opcional: permitir también pulsar Enter/Space cuando el botón esté enfocado
+    btn.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' ' || e.keyCode === 13 || e.keyCode === 32){
+        e.preventDefault();
+        hideHero();
+      }
+    });
+  })();
+</script>
   <script>
   (function(){
     var hero = document.getElementById('hero');
