@@ -213,17 +213,18 @@
   }
 
   /* Hero fixed on top — visible area 60vh (opción 1) */
-  .hero {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 60vh; /* ajustá esta altura si querés más/menos imagen */
-    margin-left: calc(50% - 50vw);
-    background: url('images/1.avif') center/cover no-repeat;
-    background-color: #000; /* fallback */
-    z-index: 0;
-  }
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  margin-left: 0;
+  object-fit: contain;
+  object-position: center bottom;
+  z-index: -1;
+}
 </style></head>
 <body>
   <!-- Skip link  -->
