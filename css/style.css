@@ -54,24 +54,6 @@
 <link rel="canonical" href="https://grossmeisteriii.github.io/DieOrden/">
     
   <style>
-#hero{
-  display:block !important;
-  position: static !important;
-  min-height:100vh !important;
-  width:100% !important;
-  background-color:#000 !important;
-  background-image: url('images/1.avif') !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  z-index:0 !important;
-}
-@media (max-width:520px){
-  #hero{ background-position: center 30% !important; }
-}
     :root{
       --black:#000000;
       --gold:#ffff00;
@@ -102,25 +84,54 @@
     mix-blend-mode: multiply;
     z-index:0;
   }
-#hero{
-  display:block;
-  min-height:100vh;
-  width:100%;
-  background-color:#000;
-  background-image: url('images/1.avif');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  z-index:0;
-  @media (max-width:520px){ #hero{ background-position: center 30%;
-}
 
-/* media: móvil -> ajustar foco si hace falta */
-@media (max-width:520px){
-  #hero{
-    background-position: center 30%;
+    /* Container */
+  .wrap{
+    width:100%;
+    max-width:var(--card-width);
+    margin: 0 auto;         /* centra el contenido (evita que parezca corrida) */
+    padding:40px 48px;
+    border-radius:12px;
+    background: var(--panel-bg);
+    box-shadow: 0 24px 60px rgba(16,22,18,0.35);
+    border: 1px solid rgba(0,0,0,0.06);
+    backdrop-filter: blur(6px) saturate(110%);
+    color:var(--text);
+    z-index:2;
   }
-}
+
+    header{ text-align:center; margin-bottom:18px; }
+
+    h1{
+      margin:0 0 8px;
+      font-family:"Times New Roman", Times;
+      color:var(--gold);
+      font-size:3.6rem; /* mod */
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+      font-weight:700;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    /* press */
+    .lead-quote{
+      margin:0 auto 18px;
+      max-width:86%;
+      font-size:1.5rem; /* mod */
+      color:#344338;
+      font-style:italic;
+      line-height:1.45;
+      text-align:center;
+    }
+
+    /* Principal */
+    .content{
+      margin-top:10px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:18px;
+      align-items:start;
+    }
 
     .long{
       font-size:1.25rem; /* mod */
@@ -230,5 +241,4 @@
     </article>
   </main>
 </body>
-<div id="hero" role="img" aria-label="Imagen de inicio"></div>
 </html>
