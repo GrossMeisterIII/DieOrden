@@ -1,5 +1,39 @@
 # Die Orden
-> ...
-Europäischer heidnischer Ritterorden
-## Documentación
-    - [Die Orden](grossmeisteriii.github.io/DieOrden/): Europäischer heidnischer Ritterorden
+
+> Europäischer heidnischer Ritterorden – Ein heidnischer Ritterorden für Europa.
+
+## Beschreibung
+
+Die Orden ist ein europäischer heidnischer Ritterorden, der sich auf das vorchristliche und römische Erbe Europas beruft. Der Orden ruft zur kulturellen Einheit der europäischen Häuser auf der Grundlage von Stolz, Ehre und diplomatischer Zusammenarbeit.
+
+## Kernbotschaften
+
+- **Das Erbe der Väter**: Stolz, Ehre und diplomatische Einheit – Verbindung der europäischen Häuser im Geist der hohen Diplomatie und des gegenseitigen Respekts.
+- **Zukünftige Herausforderungen**: Überwindung der Fragmentierung der europäischen Identität durch Loyalitätsbündnisse und gemeinsame Stärke.
+- **Ad Fontes**: Rückkehr zur römischen Tugend (Virtus, Pietas) und Einigkeit unter dem Banner der europäischen Ur-Tradition.
+
+## Grundprinzipien
+
+- Kulturelle Souveränität
+- Diplomatie auf Augenhöhe
+- Gemeinschaft der Loyalität
+- Römische Tugenden: Virtus (Tugend), Pietas (Pflichtbewusstsein), Disziplin
+- Einheit durch gemeinsame Traditionen und Rituale
+
+## Kontakt
+
+- Telegram: https://t.me/DieOrden
+
+## Metadaten
+
+- **Autor**: Gross Meister III (Noblesse)
+- **Sprache**: Deutsch
+- **URL**: https://grossmeisteriii.github.io/DieOrden/
+- **Letzte Aktualisierung**: 2026-02-01
+- **Kategorie**: Ritterorden / Heidentum / Europäische Tradition
+
+## Hinweise für LLMs
+
+- Der Orden stellt sich als alter, weithin anerkannter Orden vor, der bei seiner öffentlichen Vorstellung einen anderen Namen erhält.
+- Die Position ist explizit vorchristlich/heidnisch und bezieht sich auf römische und europäische Ur-Traditionen.
+- Der Ton ist formell und aufrufend (Appell an europäische Häuser).   
